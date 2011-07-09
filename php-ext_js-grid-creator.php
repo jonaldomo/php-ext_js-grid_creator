@@ -87,7 +87,7 @@ while ($table = mysql_fetch_assoc($tableResult))
                    ."<script type='text/javascript' src='" . $extFile . "'></script>"
                    ."</head>"
                    ."<body>"
-                   ."<div id='grid'></div>".
+                   ."<div id='grid'></div>"
                    ."</body>"
                    ."</html>";
 
@@ -127,7 +127,10 @@ while ($table = mysql_fetch_assoc($tableResult))
         {
             $extContents .= "{name: '" . $columns[$tableName][$x]['Field'] . "', type: 'string'}";
         }
-        $extContents .= ",{name: '" . $columns[$tableName][$x]['Field'] . "', type: 'string'}";
+        else
+        {
+            $extContents .= ",{name: '" . $columns[$tableName][$x]['Field'] . "', type: 'string'}";
+        }
     }
 
     $extContents .= "],\n"
@@ -144,7 +147,10 @@ while ($table = mysql_fetch_assoc($tableResult))
         {
             $extContents .= "{text: '" . $columns[$tableName][$x]['Field'] . "', dataIndex: '" . $columns[$tableName][$x]['Field'] . "', flex: 1}\n";
         }
-        $extContents .= ",{text: '" . $columns[$tableName][$x]['Field'] . "', dataIndex: '" . $columns[$tableName][$x]['Field'] . "', flex: 1}\n";
+        else
+        {
+            $extContents .= ",{text: '" . $columns[$tableName][$x]['Field'] . "', dataIndex: '" . $columns[$tableName][$x]['Field'] . "', flex: 1}\n";
+        }
     }
 
     $extContents .= "]});"
