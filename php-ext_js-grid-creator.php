@@ -79,7 +79,17 @@ while ($table = mysql_fetch_assoc($tableResult))
     /*
      *  HTML file contents
      */
-    $htmlContents = "<html><head><title>".$table["Tables_in_hr_recruit"]."</title><link rel='stylesheet' type='text/css' href='" . $extCss . "' /><script type='text/javascript' src='" . $extLibrary . "'></script><script type='text/javascript' src='" . $extFile . "'></script></head><body><div id='grid'></div></body></html>";
+    $htmlContents = "<html>"
+                   ."<head>"
+                   ."<title>".$table["Tables_in_hr_recruit"]."</title>"
+                   ."<link rel='stylesheet' type='text/css' href='" . $extCss . "' />"
+                   ."<script type='text/javascript' src='" . $extLibrary . "'></script>"
+                   ."<script type='text/javascript' src='" . $extFile . "'></script>"
+                   ."</head>"
+                   ."<body>"
+                   ."<div id='grid'></div>".
+                   ."</body>"
+                   ."</html>";
 
     /*
      *  HTML file creation
