@@ -2,9 +2,11 @@
 /*
  *  php-ext_js-grid-creator
  *  Create an EXT-JS grid for all tables within a specified database
+ *  Plan to add CRUD support
  *  @author John Moses
  *  @email moses.john.r@gmail.com
  *  @date July 9, 2011
+ *  
  */
 
 
